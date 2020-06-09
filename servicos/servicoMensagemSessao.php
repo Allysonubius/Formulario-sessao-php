@@ -1,5 +1,5 @@
-<?php /** @noinspection ALL */
-/**Created by Visual Studio Code 
+<?php
+/**Created by Visual Studio Code in PHPStorm
  * User Allyson
  * Date 09/06/2020
 */
@@ -32,7 +32,7 @@ function removerMensagemErro() : void
 }
 function removerMensagemSucess() : void
 {
-    if(isset($_SESSION['MESSAGE-SUCESS']))
+    if (isset($_SESSION['MESSAGE-SUCESS']))
         unset($_SESSION['MESSAGE-SUCESS']);
-{
+}
 ?>
