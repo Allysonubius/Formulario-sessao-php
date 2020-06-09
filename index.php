@@ -4,6 +4,10 @@
  * Date 09/06/2020
 */
     session_start();
+//Inclusão dos diretórios
+include "servicos/servicoMensagemSessao.php";
+include "servicos/servicoValidacao.php";
+include "servicos/servicosCategoriasCompetidor.php";
 ?>
 <!--Formulário de inscrição em PHP-->
 <!--Session start php-->
@@ -31,18 +35,18 @@
     <form action="script.php" method="post">
         <!--Nome-->
         <?php
-            $SUCESS = isset($_session['MESSAGE SUCESS']) ? $_SESSION['MESSAGE SUCESS']:'';
+            $SUCESS = obterMensagemSucess();
             if(!empty($SUCESS)){
                 echo  $SUCESS;
             }
-            $ERRO = isset($_SESSION['MESSAGE ERRO']) ? $_SESSION['MESSAGE ERRO']:'';
+            $ERRO = obterMensagemErro();
             if(!empty($ERRO)){
                 echo $ERRO;
             }
         ?>
-        <p>Seu nome:<input type="text" name="nome"</p>
+        <p>Seu nome: <input type="text" name="nome" </p>
         <!--Idade-->
-        <p>Sua idade: <input type="text" name="idade"</p>
+        <p>Sua idade: <input type="text" name="idade" </p>
         <!--Submit-->
         <p><input type="submit" value="Enviar"</p>
     </form>

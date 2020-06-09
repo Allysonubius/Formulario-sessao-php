@@ -3,11 +3,7 @@
  * User Allyson
  * Date 09/06/2020
 */
-//seleção do volunário
-//var_dump("Nome: ".$nome);
-//var_dump("Idade: ".$idade);
 //Reformulação de formulário
-
 function validarNome(string $nome) : bool
 {
     if(empty($nome))
