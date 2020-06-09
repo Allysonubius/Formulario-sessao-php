@@ -1,9 +1,10 @@
-<!--Formulário de inscrição em PHP-->
-<!--Documento criado por Allyson de Olivera Brandão -->
-<!--Session start php-->
 <?php 
     session_start();
 ?>
+<!--Formulário de inscrição em PHP-->
+<!--Documento criado por Allyson de Olivera Brandão -->
+<!--Session start php-->
+
 <!doctype html>
 <!--Linguagem-->
 <html lang="pt-br">
@@ -28,7 +29,9 @@
     <form action="script.php" method="post">
         <!--Nome-->
         <?php
-            $MensagemErro =  isset($_SESSION['ERRO MESSAGE']) ;
+            $MensagemErro =  isset($_SESSION['ERRO MESSAGE']) ? $_SESSION['ERRO MESSAGE'] : ' ';
+            if(!empty($MensagemErro))
+            echo $MensagemErro;
         ?>
         <p>Seu nome:<input type="text" name="nome"</p>
         <!--Idade-->

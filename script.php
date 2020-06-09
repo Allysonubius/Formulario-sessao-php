@@ -20,21 +20,28 @@ $idade = $_POST['idade'];
 //var_dump("Idade: ".$idade);
 
 //Reformulação de formulário
+if(empty($nome))
+{
+    $_SESSION['ERRO MESSAGE'] = 'Você precisa escrever seu nome para seguir adiante.';
+    header('location: index.php');
+}
 if(strlen($nome) < 3)
 {
-    $_SESSION['ERRO MESSAGE']  = 'O nome não pode ser vazio';
+    $_SESSION['ERRO MESSAGE']  = 'O nome não pode ser vazio, por favor preencha novamente o Formulário.';
     //echo 'O nome deve ter mais de 3 caracteres.'; 
-    return ;   
+    header('location: index.php') ;   
 }
 if(strlen($nome) > 30)
 {
-    echo 'O nome e muito extenso !';
-    return ;
+    $_SESSION['ERRO MESSAGE'] =  'Você ultrapassou 40 caracteres ! Preencha novamente seu nome .';
+    //echo 'O nome e muito extenso !';
+    header('location: index.php');
 }
 if(!is_numeric($idade))
 {
-    echo 'informe um numero para a idade !' ;
-    return ;
+    $_SESSION['ERRO MESSAGE'] = 'Informe novamente sua idade.';
+    //echo 'informe um numero para a idade !' ;
+    header('location: index.php') ;
 }
 
 //Separação por paramentros das idades com if else.
