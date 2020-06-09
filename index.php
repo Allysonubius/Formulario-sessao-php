@@ -29,9 +29,14 @@
     <form action="script.php" method="post">
         <!--Nome-->
         <?php
-            $MensagemErro =  isset($_SESSION['ERRO MESSAGE']) ? $_SESSION['ERRO MESSAGE'] : ' ';
-            if(!empty($MensagemErro))
-            echo $MensagemErro;
+            $SUCESS = isset($_session['MESSAGE SUCESS']) ? $_SESSION['MESSAGE SUCESS']:'';
+            if(!empty($SUCESS)){
+                echo  $SUCESS;
+            }
+            $ERRO = isset($_SESSION['MESSAGE ERRO']) ? $_SESSION['MESSAGE ERRO']:'';
+            if(!empty($ERRO)){
+                echo $ERRO;
+            }
         ?>
         <p>Seu nome:<input type="text" name="nome"</p>
         <!--Idade-->
