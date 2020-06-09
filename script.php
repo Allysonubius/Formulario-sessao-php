@@ -34,6 +34,11 @@ if(strlen($nome) > 30)
     echo 'O nome e muito extenso !';
     return ;
 }
+if(!is_numeric($idade))
+{
+    echo 'informe um numero para a idade !' ;
+    return ;
+}
 
 //Separação por paramentros das idades com if else.
 if($idade >= 6 && $idade <= 12){
