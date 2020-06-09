@@ -1,6 +1,7 @@
 <?php
 //abertura php
-
+//Sessão
+session_start();
 //Variaveis em PHP
 $categorias = [];
 $categorias[] = 'infantil' ;
@@ -19,14 +20,10 @@ $idade = $_POST['idade'];
 //var_dump("Idade: ".$idade);
 
 //Reformulação de formulário
-if(empty($nome))
-{
-    echo 'O nome não pode ser vazio !';
-    return;
-}
 if(strlen($nome) < 3)
 {
-    echo 'O nome deve ter mais de 3 caracteres.'; 
+    $_SESSION['ERRO MESSAGE']  = 'O nome não pode ser vazio';
+    //echo 'O nome deve ter mais de 3 caracteres.'; 
     return ;   
 }
 if(strlen($nome) > 30)
@@ -73,3 +70,4 @@ if($idade >= 6 && $idade <= 12){
 
 
 //fechamento php
+?>
