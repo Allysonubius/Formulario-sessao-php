@@ -1,4 +1,8 @@
 <?php
+/**Created by Visual Studio Code 
+ * User Allyson
+ * Date 09/06/2020
+*/
 //abertura php
 //Sessão
 session_start();
@@ -19,7 +23,7 @@ if($idade >= 6 && $idade <= 12){
     for($I = 0; $I <= count($categorias);$I++) {
         if($categorias[$I] == 'infantil') 
             //echo "O nadador ".$nome. " compete na categoria infantil.";
-            $_SESSION['SUCESS MESSAGE'] = "O nadador ".$nome." compete na categoria ".$categorias[$I];
+            $_SESSION['SUCESS-MESSAGE'] = "O nadador ".$nome." compete na categoria ".$categorias[$I];
             header('location:index.php');
             return;
     }
@@ -28,7 +32,7 @@ if($idade >= 6 && $idade <= 12){
     for($I = 0; $I <= count($categorias);$I++) {
         if($categorias[$I] == 'adolescente') 
         //echo "O nadador ".$nome." compete na categoria adolescente.";
-            $_session['MESSAGE SUCESS'] = "O nadador ".$nome." compete na categoria ".$categorias[$I];
+            $_session['MESSAGE-SUCESS'] = "O nadador ".$nome." compete na categoria ".$categorias[$I];
             header('location:index.php');
             return;
     }
@@ -37,7 +41,7 @@ if($idade >= 6 && $idade <= 12){
     for($I = 0; $I <= count($categorias);$I++) {
         if($categorias[$I] == 'adulto') 
         //echo "O nadador ".$nome." compete na categoria adulto.";
-            $_session['MESSAGE SUCESS'] = "O nadador ".$nome." compete na categoria ".$categorias[$I];
+            $_session['MESSAGE-SUCESS'] = "O nadador ".$nome." compete na categoria ".$categorias[$I];
             header('location:index.php');
             return;
     }
@@ -46,7 +50,7 @@ if($idade >= 6 && $idade <= 12){
         //echo 'idosos';
         if($categorias[$I] == 'idosos') 
         //echo "O nadador ".$nome." compete na categoria idosos.";
-            $_session['MESSAGE SUCESS'] = "O nadador ".$nome." compete na categoria ".$categorias[$I];
+            $_session['MESSAGE-SUCESS'] = "O nadador ".$nome." compete na categoria ".$categorias[$I];
             header('location:index.php');
             return;
     }

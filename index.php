@@ -1,10 +1,12 @@
 <?php 
+/**Created by Visual Studio Code 
+ * User Allyson
+ * Date 09/06/2020
+*/
     session_start();
 ?>
 <!--Formulário de inscrição em PHP-->
-<!--Documento criado por Allyson de Olivera Brandão -->
 <!--Session start php-->
-
 <!doctype html>
 <!--Linguagem-->
 <html lang="pt-br">
