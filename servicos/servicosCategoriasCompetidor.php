@@ -15,6 +15,8 @@ function defineCategoriaCompetidor(string $nome, string $idade) : ?string
     $categorias[] = 'idosos';
 //Validação de dados
     if (validarNome($nome) && validaIdade($idade)) {
+        //Se tudo ocorrer BEM será removido a mensagem de ERRO
+        obterMensagemErro();
 //Separação por paramentros das idades com if else.
         if ($idade >= 6 && $idade <= 12) {
             //echo 'infantil';
@@ -46,7 +48,9 @@ function defineCategoriaCompetidor(string $nome, string $idade) : ?string
             }
         }
     }
-    else{
+    else {
+        //Se tudo ocorrer MAL será removido a mensagem de SUCESSO
+        removerMensagemSucess();
         return obterMensagemErro();
     }
 }
